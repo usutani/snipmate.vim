@@ -18,7 +18,7 @@ snippet beg
 	end
 
 snippet req
-	require "${1}"${2}
+	require '${1}'${2}
 snippet #
 	# =>
 snippet end
@@ -392,7 +392,7 @@ snippet unif
 	end
 # option_parse {}
 snippet optp
-	require "optparse"
+	require 'optparse'
 
 	options = {${1:default => "args"}}
 
@@ -404,9 +404,9 @@ snippet opt
 		${6}
 	end
 snippet tc
-	require "test/unit"
+	require 'test/unit'
 
-	require "${1:library_file_name}"
+	require '${1:library_file_name}'
 
 	class Test${2:$1} < Test::Unit::TestCase
 		def test_${3:case_name}
@@ -414,10 +414,10 @@ snippet tc
 		end
 	end
 snippet ts
-	require "test/unit"
+	require 'test/unit'
 
-	require "tc_${1:test_case_file}"
-	require "tc_${2:test_case_file}"${3}
+	require 'tc_${1:test_case_file}'
+	require 'tc_${2:test_case_file}'${3}
 snippet as
 	assert(${1:test}, "${2:Failure message.}")${3}
 snippet ase
