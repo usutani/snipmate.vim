@@ -1,0 +1,127 @@
+# Organization
+snippet pkg
+	package ${1:main}${2}
+snippet imp
+	import ${2:$1 }"${1:fmt}"${3}
+snippet imps
+	import (
+		${1}
+	)
+# Declaration
+snippet type
+	type ${1:name} ${2:definition}
+snippet types
+	type (
+		${1:name} ${2:definition}
+	)
+snippet con
+	const ${1:name} ${2:type} = ${3:value}
+snippet cons
+	const (
+		${1:name} ${2:type} = ${3:value}
+	)
+snippet var
+	var ${1:name} ${2:type} = ${3:value}
+snippet vars
+	var (
+		${1:name} ${2:type} = ${3:value}
+	)
+snippet func
+	func ${1:name}(${2:params}) ${3:type }{
+		${4:// body}
+	}
+snippet funcv
+	func ${1:name}(${2:params}) (${3:type}) {
+		${4:// body}
+	}
+snippet meth
+	func (${1:receiver} ${2:type}) ${3:name}(${4:params}) ${5:type }{
+		${6:// body}
+	}
+snippet methv
+	func (${1:receiver} ${2:type}) ${3:name}(${4:params}) (${5:type}) {
+		${6:// body}
+	}
+# Types
+snippet in
+	interface {}${1}
+snippet int
+	interface {
+		${1:method}
+	}
+snippet st
+	struct {
+		${1:member}
+	}
+snippet []
+	[]${1:valtype}
+snippet map
+	map[${1:keytype}]${2:valtype}
+snippet ch
+	chan ${1:valtype}
+snippet fun
+	func(${1:params}) ${2:type}
+# Initialization
+snippet :
+	${1:name} := ${2:value}
+snippet mk
+	${1:name} := make(${2:reftype})${3}
+snippet new
+	${1:name} := new(${2:type})${3}
+## Control Flow
+snippet if
+	if ${1:condition} {
+		${2:// body}
+	}
+snippet sw
+	switch ${1:expression} {
+	case${2}
+	}
+snippet sel
+	select {
+	case${1}
+	}
+snippet case
+	case ${1:condition}:
+		${2:// body}
+snippet def
+	default:
+		${1:// body}
+snippet for
+	for ${1:condition} {
+		${2:// body}
+	}
+snippet fori
+	for ${2:i} = 0; $2 < ${1:count}; $2${3:++} {
+		${4:// body}
+	}
+snippet forr
+	for ${2:name} := range ${1:collection} {
+		${3:// body}
+	}
+# Idioms
+snippet go
+	go func(${2:params}) {
+		${3:// body}
+	}(${1:values})
+snippet de
+	defer func(${2:params}) {
+		${3:// body}
+	}(${1:values})
+snippet main
+	func main() {
+		${1:// body}
+	}
+snippet init
+	func init() {
+		${1:// body}
+	}
+snippet ,
+	${1:first}, ${2:second}
+snippet <
+	${1:channel} <- ${2:value}
+snippet ret
+	return ${1:value}
+snippet pr
+	fmt.Printf("${1:%s}\n"${2})${3}
+
